@@ -1,0 +1,95 @@
+<html> 
+	<head>
+		<link type="text/css"rel="stylesheet" href="main.css" />
+		<title> Things about animals </title> 
+		<script>
+		function banner(){
+			var text = confirm("Are You Cool If Not Do Not Click This!");
+			return text;
+		}
+
+		function answer(){
+			var radio = document.getElementsByName("trivia");
+			var selection = false;
+			var message = "";
+			for( var i = 0; i < radio.length; i++) {
+				if(radio[i].value == "yes" && radio[i].checked == true) {
+
+					selection = true;
+				} //end if statement
+			} //end for loop
+			if(selection == true) {
+				message = message + "<b><p style='color:green'>Way to go!</p></b>";
+			} else {
+				message = message + "<b><p style='color:red'>try again my friend.</p></b>";
+			}
+			document.getElementById("response").innerHTML = message;
+
+		} //end function answer
+		</script>
+	</head>
+	<body id="background">
+	<a onclick="return banner()" href="https://scratch.mit.edu/">
+
+		<header id="banner"><span class="wrap-text">This</span> is a Cool Website?</header>
+
+	</a>
+
+		<nav>
+			<ul id="navmenu">
+				<li class="navitem"> <a href="index.html"> Home </a> </li>
+				<li class="navitem"> <a href="Videos.html"> Videos </a> </li>
+				<li class="navitem"> <a href="Games.html"> Games </a> </li>
+			</ul>
+		</nav>
+
+		<div class="rightside">
+		<video width="400" height="220" controls autoplay>
+			<source src="http://www.w3schools.com/HTML/mov_bbb.mp4" type="video/mp4">
+			<source src="http://www.w3schools.com/HTML/mov_bbb.ogg" type="video/ogg">
+			Your browser does not support HTML5 video.
+		</video>
+		<div class="wrap-trivia">
+			<h2>Cat Trivia Question:</h2>
+			<p> What colors can cats be?</p>
+			<form> 
+			<div id="response"> </div>
+			<input type="radio" name="trivia" value="no"> pink with light blue <br/>
+			<input type="radio" name="tri</div>via" value="no"> green <br/>
+			<input type="radio" name="trivia" value="yes"> black with white <br/>
+			<input type="radio" name="trivia" value="no"> purple with dark blue <br/>
+			<input onclick="answer()" id="button" type="button" value="Click Here">
+			</form>
+		</div>
+		</div> <!-- closing rightside div tag -->
+
+		<div class="leftside">
+		<h1><i>Animal Watching</i></h1>
+		<p class="paragraph">
+			<strong>Animals</strong> Have <u>cool</u> <i>skills and what they can do</i>.	
+		</p>
+		<div id="wrap-list">
+		<ol>
+			<li class="listitem">Animals are cute</li>
+			<li class="listitem">Animals are fun to play with</li>
+			<li class="listitem">They all live in differt places</li>
+		</ol>
+		</div>
+		<audio width="400" height="220" controls autoplay>
+		<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
+		Your browser does not support HTML 5 audio.
+		</audio>
+		<img width="25%"src="https://thumbs.dreamstime.com/z/100-animals-4822272.jpg" />
+		<img width="25%" src="https://thumbs.dreamstime.com/z/image-cute-red-tabby-kitten-animals-day-mammal-pets-concept-animals-rescue-n-image-cute-red-tabby-kitten-animals-day-mammal-154988612.jpg" />
+		</div> <!-- closing leftside div tag -->
+		<div class="clearfloat"></div>
+
+
+		<hr/>
+
+		<center> Gideon <a href="https://scratch.mit.edu/">My Favorite Website</a></center>
+
+		<footer id="footer">I Gideon made all of this</footer>
+
+	</body>
+</html
